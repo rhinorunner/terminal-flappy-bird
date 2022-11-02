@@ -4,6 +4,6 @@
 #include <iostream>
 #include "render.cpp"
 
-uint8_t 
+uint8_t getInput();
 
 #endif
