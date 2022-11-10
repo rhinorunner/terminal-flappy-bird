@@ -1,5 +1,7 @@
 #include <iostream>
 #include <vector>
+#include <thread>
+#include <mutex>
 #include "render.h"
 
 typedef struct s_Game {
@@ -34,6 +36,7 @@ private:
 
 public:
 	GameRender(const std::pair<uint16_t,uint16_t>& screensize, Game& thisgame) : screenSize(screensize),thisGame(thisgame) {}
+
 	void printScreen() {
 		for (uint16_t y = 0; y < screenSize.second; ++y) {
 			for (uint16_t x = 0; x < screenSize.first; ++x) {
